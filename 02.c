@@ -1,25 +1,51 @@
-// write a program to remove a element at any specified position in a given linear array.
+// WAP to merge two sorted array.
+// Merging means combining two sorted array into a single array.
 
 #include<stdio.h>
 int main(){
-    int a[20],n,i,loc;
-printf("Enter the number of element of array:");
-scanf("%d",&n);
-printf("Enter the elements:");
-for(i=0;i<=n-1;i++)
-{
-    scanf("%d",&a[i]);
-}  
-printf("Enter the location to remove element");
-scanf("%d",&loc);
- 
-for (i=loc;i<=n-1;i++)
-{
-    a[i-1]=a[i];
-}
-printf("Updated array:");
-for(i=0;i<=n-2;i++){
-    printf("%d",a[i]);
-}
-return 0;
-}
+    int a[20],b[20],c[20],n,m,j,i,k;
+    printf("Enter number of elements of first array:");
+    scanf("%d",&n);
+    printf("Enter number of elements of second array:");
+    scanf("%d",&m);
+    
+    printf("Enter first array element in ascending order:");
+    for (i=0;i<=n-1;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+
+    printf("Enter second array elements in ascending order:");
+    for (j=0;j<=m-1;j++)
+    {
+        scanf("%d",&b[j]);
+    }
+    i=0;j=0;k=0;
+    while (i<n&&j<m)
+    {
+
+        if (a[i]<=b[j]){
+            c[k]=a[i];
+            i++;
+            k++;
+        }
+        else{
+            c[k]=b[j];
+            k++;
+            j++;
+        }}
+        while(i<=n-1){
+            c[k]=a[i];
+            i++;
+          k++;        }
+
+        while(j<=m-1){
+            c[k]=b[j];
+            j++;
+            k++;
+        }
+
+for (i=0;i<=n+m-1;i++){
+        printf("%d\t",c[i]);}
+
+    }
